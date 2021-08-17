@@ -14,3 +14,6 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# excluded all bin folder in which compole files should go to
+bin/
