@@ -3,6 +3,8 @@ package main
 // This is an import block
 import  (
     "fmt"
+    "regexp"
+    "strings"
 )
 
 const (
@@ -17,7 +19,20 @@ The main functions
 */
 func main() {
     // print a variable of integer
-    fmt.Println("Hello, Simon");
+    var greeting string = "Hello, Simon";
+    fmt.Println(greeting);
+
+    r, _ := regexp.Compile(`S([a-z]+)n`);
+    greeting = r.ReplaceAllString(greeting,"Apple");
+    fmt.Println(greeting);
+
+    greeting = strings.ToLower(greeting);
+    fmt.Println(greeting);
+
+    greeting = strings.Title(greeting);
+    fmt.Println(greeting);
+
+
     var i int = 42;
     fmt.Println("Hello, ", i);
 
